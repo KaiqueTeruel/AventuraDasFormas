@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/formas.css" />
+    <title>Área da Coroa</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Área da Coroa</h1>
+      <label for="raioMaior">Qual a medida do raio maior?</label>
+      <input type="number" id="raioMaior" />
+      <label for="raioMenor">Qual a medida do raio menor?</label>
+      <input type="number" id="raioMenor" />
+      <button onclick="calcularAreaDaCoroa()">Calcular</button>
+    </div>
+    <script>
+      function calcularAreaDaCoroa() {
+        const raioMaiorElement = document.getElementById("raioMaior");
+        const raioMaior = parseFloat(raioMaiorElement.value);
+
+        const raioMenorElement = document.getElementById("raioMenor");
+        const raioMenor = parseFloat(raioMenorElement.value);
+
+        const areaCoroa = Math.PI * (raioMaior ** 2 - raioMenor ** 2);
+        alert("A área da coroa é: " + areaCoroa);
+      }
+    </script>
+  </body>
+</html>

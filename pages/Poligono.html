@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/formas.css" />
+    <title>Calculo do Poligono</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Calculo do Poligono</h1>
+      <label for="escolha">
+        <h4>Informe os valores para podermos Calcular a Área</h4>
+        <br />
+      </label>
+
+      <label for="poligono">Informe o comprimento do poligono:</label>
+      <input type="number" id="poligono" />
+
+      <label for="pentagono">Informe o comprimento do pentagono:</label>
+      <input type="number" id="pentagono" />
+
+      <label for="hexagono">Informe o comprimento do hexagono:</label>
+      <input type="number" id="hexagono" />
+
+      <label for="heptagono">Informe o comprimento do heptagono:</label>
+      <input type="number" id="heptagono" />
+
+      <button onclick="calcularArea()">Calcular Área</button>
+    </div>
+
+    <script>
+      function calcularArea() {
+        const comprimentoPoligono = parseFloat(
+          document.getElementById("poligono").value
+        );
+        const comprimentoPentagono = parseFloat(
+          document.getElementById("pentagono").value
+        );
+        const comprimentoHexagono = parseFloat(
+          document.getElementById("hexagono").value
+        );
+        const comprimentoHeptagono = parseFloat(
+          document.getElementById("heptagono").value
+        );
+
+        const areaPoligono =
+          comprimentoPoligono ** 2 /
+          (4 * Math.tan(Math.PI / comprimentoPoligono));
+        const areaPentagono =
+          (5 * comprimentoPentagono ** 2) / (4 * Math.tan(Math.PI / 5));
+        const areaHexagono =
+          (6 * comprimentoHexagono ** 2) / (4 * Math.tan(Math.PI / 6));
+        const areaHeptagono =
+          (7 * comprimentoHeptagono ** 2) / (4 * Math.tan(Math.PI / 7));
+
+        // Criar uma string com os resultados
+        const resultadoString = `
+          Área do Polígono: ${areaPoligono.toFixed(2)}
+          Área do Pentágono: ${areaPentagono.toFixed(2)}
+          Área do Hexágono: ${areaHexagono.toFixed(2)}
+          Área do Heptágono: ${areaHeptagono.toFixed(2)}
+        `;
+
+        // Exibir os resultados em um alert
+        alert(resultadoString);
+      }
+    </script>
+  </body>
+</html>

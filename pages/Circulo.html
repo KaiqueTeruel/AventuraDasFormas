@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/formas.css" />
+    <title>Área do Círculo</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Área do Círculo</h1>
+      <label for="raio">Insira o raio do círculo:</label>
+      <input type="number" id="raio" />
+      <button onclick="calcularAreaDoCirculo()">Calcular</button>
+    </div>
+    <script>
+      function calcularAreaDoCirculo() {
+        const raioElement = document.getElementById("raio");
+        const raio = parseFloat(raioElement.value);
+
+        if (!isNaN(raio)) {
+          const areaCirculo = Math.PI * Math.pow(raio, 2); // Math.pow eleva o numero a 2
+          alert("A área do círculo é: " + areaCirculo);
+        } else {
+          alert("Por favor, insira um valor válido para o raio.");
+        }
+      }
+    </script>
+  </body>
+</html>

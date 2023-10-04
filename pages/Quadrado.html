@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/formas.css" />
+    <title>Calculo do Quadrado</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Calculo do Quadrado</h1>
+      <label for="direito">Informe o valor do lado direito do Quadrato?</label>
+      <input type="number" id="direito" />
+
+      <label for="esquerdo"
+        >Informe o valor do lado esquerdo do Quadrato?</label
+      >
+      <input type="number" id="esquerdo" />
+      <button onclick="calcularQuadrado()">Calcular</button>
+    </div>
+    <script>
+      function calcularQuadrado() {
+        direito = document.getElementById("direito");
+        direito = parseFloat(direito.value);
+
+        esquerdo = document.getElementById("esquerdo");
+        esquerdo = parseFloat(esquerdo.value);
+
+        calc = direito * esquerdo;
+        alert("O resultado é: " + calc);
+      }
+    </script>
+  </body>
+</html>

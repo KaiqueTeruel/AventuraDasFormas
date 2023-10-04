@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/formas.css" />
+    <title>Calculo do Trapezoide</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Calculo do Trapezoide</h1>
+      <label for="baseMaior">Informe o comprimento da base maior:</label>
+      <input type="number" id="baseMaior" />
+
+      <label for="baseMenor">Informe o comprimento da base menor:</label>
+      <input type="number" id="baseMenor" />
+
+      <label for="altura">Informe a altura:</label>
+      <input type="number" id="altura" />
+
+      <button onclick="calcularTrapezoide()">Calcular Área</button>
+    </div>
+    <script>
+      function calcularTrapezoide() {
+        // Obtenha os valores inseridos pelo usuário
+        const baseMaior = parseFloat(
+          document.getElementById("baseMaior").value
+        );
+        const baseMenor = parseFloat(
+          document.getElementById("baseMenor").value
+        );
+        const altura = parseFloat(document.getElementById("altura").value);
+
+        // Calcula a área do trapézio
+        const area = ((baseMaior + baseMenor) * altura) / 2;
+
+        // Exibe o resultado na página
+        alert(area);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/formas.css" />
+    <title>Cálculo do Setor</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Cálculo do Setor</h1>
+
+      <label for="raio">Informe o valor do raio?</label>
+      <input type="number" id="raio" />
+
+      <label for="angulo">Informe o valor do ângulo?</label>
+      <input type="number" id="angulo" />
+      <hr />
+      <br />
+      <button onclick="calcularSetor()">Calcular Área</button>
+      <p id="resultado"></p>
+    </div>
+
+    <script>
+      function calcularSetor() {
+        const area =
+          (Math.PI *
+            Math.pow(document.getElementById("raio").value, 2) *
+            document.getElementById("angulo").value) /
+          360;
+
+        alert(area);
+      }
+    </script>
+  </body>
+</html>
